@@ -50,8 +50,6 @@ def create_index(index_name):
     es.indices.create(index=index_name, body=request_body)
 
 
-es.query_ruleset()
-
 def index_in_elastic(loader, index_name):
     logger.info(
         f"{len(loader)} [index_name:<{index_name}>] will be indexed in elastic"
