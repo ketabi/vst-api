@@ -1,5 +1,8 @@
 [development]
 dynaconf_merge = true
+data_path = "data/data-fasa/summer-1401/"
+index_prefix= "cohort_"
+app_name="vst"
 
 [development.db]
 echo = true
@@ -8,9 +11,11 @@ echo = true
 log_level = "debug"
 reload = true
 cors_origins = ["http://localhost:3000", "http://localhost:4200"]
+data_path = "data/data-fasa/summer-1401/"
 
 [production]
 dynaconf_merge = true
+data_path = "data/data-fasa/summer-1401/"
 
 [production.db]
 echo = false
@@ -18,6 +23,7 @@ echo = false
 [production.server]
 log_level = "error"
 reload = false
+data_path = "data/data-fasa/summer-1401/"
 
 [testing]
 dynaconf_merge = true

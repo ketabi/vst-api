@@ -1,0 +1,2 @@
+export VST_ELASTIX_PASS=
+export VST_ELASTIX_USER=

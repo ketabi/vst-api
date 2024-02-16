@@ -275,9 +275,9 @@ def test_stale_token(api_client_authenticated):
     result = response.json()
 
     # set stale access_token
-    api_client_authenticated.headers[
-        "Authorization"
-    ] = f"Bearer {result['access_token']}"
+    api_client_authenticated.headers["Authorization"] = (
+        f"Bearer {result['access_token']}"
+    )
 
     response = api_client_authenticated.patch(
         f"/user/{user_id}/password/",

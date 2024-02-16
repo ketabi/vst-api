@@ -135,3 +135,5 @@ dmypy.json
 .github/templates/*
 .idea/
 
+data/
+logs/
