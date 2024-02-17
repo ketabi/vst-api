@@ -13,11 +13,16 @@ pattern_camel_case = re.compile(r"(?<!^)(?=[A-Z])")
 
 
 def get_filename(file):
+    file = file.replace('\\', '/')
     return pat.search(file).group(1)
 
 
 def list_files():
-    files = glob.glob(f"{settings.data_path}//*.xlsx")
+    files_path = f"{settings.data_path}//*.xlsx"
+    files = glob.glob(files_path)
+
+    logger.info(f'path:: {files_path}')
+
     file_names = [get_filename(f) for f in files]
     return files, file_names
 

@@ -123,4 +123,3 @@ class EmploymentHistorySheetLoader(SheetLoader):
             },
         }
         json_list.append(a)
-

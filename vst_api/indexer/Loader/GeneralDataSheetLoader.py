@@ -71,5 +71,5 @@ class GeneralDataSheetLoader(SheetLoader):
         except Exception as e:
             logger.warning(f"{e} in set_point ")
             point = points_map["other"]
-        return f"<{self.sheet_info.idx_name}> - POINT ({point[1]} {point[0]})"
+        return f"POINT ({point[1]} {point[0]})"
 

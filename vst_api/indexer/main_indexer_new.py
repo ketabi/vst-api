@@ -356,9 +356,12 @@ def merge_files():
             info = loader.get_info()
             info["count_failed_to_index"] = ignored
             info["count_indexed"] = indexed
-            info["count_updated"] = indexed
+            info["count_updated"] = updated
 
-            # index_json_in_elastic(info, id=name, index_name="cohort_indexes_info")
+            info["idx_prefix"] = t.idx_prefix
+            info["file_name"] = t.file_name + '.xlsx'
+
+            index_json_in_elastic(info, id=t.idx_name, index_name="cohort_indexes_info_all")
             logger.info(f" ✔️ {loader.sheet_info.idx_name} - Index info {info}")
         else:
             logger.warning('Loader is None')
